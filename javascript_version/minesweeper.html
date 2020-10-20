@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="./styles/minesweeper.css">
+        <!-- <link href='https://fonts.googleapis.com/css?family=Montserrat Subrayada' rel='stylesheet'> -->
+        <script type='text/javascript', src='./scripts/minesweeper.js'></script>
+        <!-- <script type='text/javascript' src='./scripts/game_timer.js'></script> -->
+
+    </head>
+    <body onload="get_elements()">
+        <!-- <script>
+            let w;
+            
+            const startWorker = () => {
+              if(typeof(Worker) !== "undefined") {
+                if(typeof(w) == "undefined") {
+                  w = new Worker("./scripts/game_timer.js");
+                }
+                w.onmessage = function(event) {
+                  document.getElementById("game-timer").innerHTML = event.data;
+                };
+              } else {
+                document.getElementById("game-timer").innerHTML = "Sorry, your browser does not support Web Workers...";
+              }
+            };
+            
+            function stopWorker() { 
+              w.terminate();
+              w = undefined;
+            }
+        </script> -->
+        <div id="instructions" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="close_instructions()">&times;</span>
+                <!-- <button onclick="close()">X</button> -->
+                <span class='modal-heading'>How To Play</span></br></br>
+                <span class='modal-stuff'>
+                    Select a difficulty level to start.</br>
+                    Click on a tile to reveal it.</br>
+                    Alt+Click on a tile to flag it. Flagged tiles cannot be revealed.</br>
+                    Alt+Click on a flagged tile to unflag it.</br>
+                    Each mine-free tile is either blank or displays a number.</br>
+                    This number corresponds to the number of mines in that cell's vicinity. It ranges from 1 to 8.</br>
+                    Use this information to identify mines and avoid them.</br>
+                    Good Luck!</br>
+                    Try not to die too many times.
+                </span>
+            </div>
+          
+        </div>
+
+
+        <div id="game-status">
+
+            <!-- Modal content-->
+            <!-- <div id='modal-status-content'> -->
+                <!-- <span class="close" onclick="close_game_status()">&times;</span></br> -->
+                <!-- <button onclick="close()">X</button> -->
+                <!-- <span id='game-status-message'></span> -->
+                    
+                <!-- </span> -->
+            <!-- </div> -->
+          
+            <span class='game-status-message' id='status-message'></span>
+
+
+
+
+
+
+        </div>
+
+
+        <div class='main-container'>
+            <div class='top-bar'>
+                <div class='title help' onclick="show_instructions()">
+                    HELP
+                </div>
+                <div class='title' onclick="window.location.reload();">MINESWEEPER</div>
+            </div>
+            <div class='main-game-container'>
+                <div class='options'>
+                    <div class='timer-div' id='game-timer' ></div>
+                    <div class='option-container'>
+                        <button class='option-button unselected' id='beginner-board' onclick='make_beginner_minefield()'>Beginner</button>
+                        <button class='option-button unselected' id='intermediate-board' onclick='make_intermediate_minefield()'>Intermediate</button>
+                        <button class='option-button unselected' id='advanced-board' onclick='make_advanced_minefield()'>Advanced</button>
+                    </div>
+                    
+                    <div class='reset-container'>
+                        <button class='reset-button' id='reset-board' onclick="make_minefield()">Reset</button>
+                    </div>
+                </div>
+                <div class='board-container'>
+                    <div class='board' id='minefield'>
+                        <span style="line-height: 1.8;">
+                            Select a difficulty level to start</br>
+                            Click on a tile to reveal it</br>
+                            Alt+Click on a tile to flag it</br>
+                            Flagged tiles cannot be revealed</br>
+                            Alt+Click on a flagged tile to unflag it</br>
+                            Each mine-free tile is either blank or displays a number</br>
+                            This number corresponds to the number of mines in that cell's vicinity</br>
+                            It ranges from 1 to 8</br>
+                            Use this information to identify mines and avoid them</br>
+                            Good Luck!</br>
+                            Try not to die too many times
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

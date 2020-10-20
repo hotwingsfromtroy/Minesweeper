@@ -1,0 +1,431 @@
+@font-face {
+    font-family: 'MontserratSubrayada';
+    src: url('../fonts/MontserratSubrayada/MontserratSubrayada-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'MontserratSubrayada';
+    src: url('../fonts/MontserratSubrayada/MontserratSubrayada-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+  /* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 25px;
+    /* border: 1px solid #888; */
+    border-left: 5px solid #08838e;
+    border-radius: 5px;
+    /* border-bottom-right-radius: 10px; */
+    /* border-top-right-radius: 10px; */
+
+    width: 800px;
+}
+
+
+.modal-game-won{
+    background-color: #00a03050;
+    background-image: linear-gradient(#00a03050 , #000000a1, #000000);
+    color: #c7c7c7;
+    /* -webkit-text-stroke: 1px  black; */
+    /* opacity: 0.4; */
+    display: none; /* Hidden by default */
+
+    justify-content: center;
+    padding-top: 250px;
+
+
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* padding-top: 100px; Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* padding:50%; */
+
+    overflow: auto; /* Enable scroll if needed */
+    /* background-color: rgb(0,0,0); Fallback color */
+    /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+}
+
+
+.modal-game-lost{
+    background-color: #99000050;
+    background-image: linear-gradient(#99000075 , #000000a1, #000000);
+    color: #c7c7c7;
+    /* -webkit-text-stroke: 1px black; */
+    /* opacity: 0.4; */
+    display: none; /* Hidden by default */
+
+    justify-content: center;
+    padding-top: 250px;
+    /* align-items: center; */
+
+
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* padding-top: 100px; Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* padding:50%; */
+    overflow: auto; /* Enable scroll if needed */
+    /* background-color: rgb(0,0,0); Fallback color */
+    /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+}
+
+
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #818181;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-heading{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 30px;
+    color: #949494;
+}
+
+.modal-stuff{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+.game-status-message{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 50px;
+    /* color: #c7c7c7; */
+    
+}
+
+
+
+
+
+
+
+
+
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.top-bar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    /* text-align: right; */
+    /* line-height: 70px; */
+    /* font-size: 30px; */
+    
+    /* background-color: #192666; */
+    border-bottom: solid 2px #192666;
+    /* border-right: solid 2px #192666; */
+    /* border-bottom-right-radius: 3px; */
+    /* color: #c6c6c6; */
+}
+
+
+#xplosion{
+    height: 40px;
+}
+
+.title{
+    
+    /* align-self: flex-start; */
+    font-family: 'MontserratSubrayada';
+    font-weight: bold;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+    /* color: #c6c6c6; */
+    color: #949494;
+    font-size: 30px;
+    cursor: default;
+
+}
+
+.help{
+    
+    /* align-self: flex-start; */
+    /* font-family: 'Montserrat'; */
+    /* font-weight: bold; */
+    /* height: 30px; */
+    margin-top: 15px;
+    /* margin-left: 10px; */
+  
+    /* color: #949494; */
+    font-size: 20px;
+    /* cursor: default; */
+
+}
+
+.title:hover{
+    color: #08838e;
+
+}
+
+
+.options{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+
+.option-button{
+    background-color: #08838e;
+    /* opacity: 0.6; */
+    height:40px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    /* padding: 15px 32px; */
+    text-align: center;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    font-family: 'Montserrat';
+    /* font-weight: lighter; */
+    font-size: 16px;
+    margin: 0px 2px;
+    cursor: pointer;
+}
+
+.unselected{
+    opacity: 0.6;
+    /* background-color: #62a4aa; */
+
+}
+
+.selected{
+    opacity: 1;
+    /* background-color: #08838e; */
+
+}
+
+.timer-div{
+    height: 40px;
+    width: 80px;
+    font-family: 'Montserrat';
+    font-size: 30px;
+}
+
+.reset-button{
+    background-color: #08838e;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    /* padding: 15px 32px; */
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    font-family: 'Montserrat';
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+}
+
+
+.main-game-container{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #fcac00; */
+    /* max-height: 100%; */
+}
+
+
+.board-container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.board{
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    display: flex;
+    flex-wrap: nowrap;
+    /* overflow: hidden; */
+    flex-direction: column;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    text-align: center;
+
+}
+
+.minefield-row{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.cell{
+    /* background-color: #cecece;  */
+    /* border: none; */
+    /* color: white; */
+    /* width: 33px;
+    height: 33px; */
+    /* padding: 15px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    /* font-family: 'Montserrat'; */
+    font-weight: bold;
+}
+
+.small{
+    width: 34px;
+    height: 34px;
+}
+
+.big{
+    width: 45px;
+    height: 45px;
+}
+
+
+.unexplored{
+    /* border: solid 1px; */
+    background-color: #cecece; 
+    color: #cecece;
+}
+
+.discovered{
+    border: solid 1px black;
+    /* cursor: not-allowed; */
+    background-color: #3f3f3f;
+
+}
+
+.flagged{
+    background-color: #ac0000;
+    color: #ac0000;
+}
+
+
+.empty{
+    color: #3f3f3f;
+}
+
+.one{
+    color:#00fc10;
+    
+}
+
+.two{
+    color:#00fcce;
+}
+.three{
+    color:#00a6ff;
+}
+
+.four{
+    color:#f6ff00;
+}
+
+.five{
+    color:#ffae00;
+}
+
+.six{
+    color: #ff5100;
+    
+}
+
+.seven{
+    color:#ff008c;
+}
+
+.eight{
+    color:#ff00d9;
+}
+
+.mine{
+    background-color: black;
+    color: #ff0000;
+    /* font-size: 18px; */
+    /* font-weight: ; */
+}
+
+
+@-webkit-keyframes exploded_mine {
+    0% { background-color: #810000; color: rgb(194, 194, 194);}
+    100% { background-color: black; color: #ff0000 ;}
+    /* 100% { background-color: black; } */
+}
+
+.exploded{
+    -webkit-animation: exploded_mine 1.5s infinite alternate;
+}
