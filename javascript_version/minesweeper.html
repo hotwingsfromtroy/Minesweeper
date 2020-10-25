@@ -1,13 +1,15 @@
-<html>
+<html color-mode = 'dark'>
     <head>
         <title>Minesweeper</title>
         <link rel="stylesheet" href="./styles/minesweeper.css">
         <!-- <link href='https://fonts.googleapis.com/css?family=Montserrat Subrayada' rel='stylesheet'> -->
         <script type='text/javascript', src='./scripts/minesweeper.js'></script>
+        <script type='text/javascript', src='./scripts/minesweeper_tiles_page.js'></script>
+
         <!-- <script type='text/javascript' src='./scripts/game_timer.js'></script> -->
 
     </head>
-    <body onload="get_elements()">
+    <body onload="{get_elements(); make_tile_page();}" class='color-mode'>
         <!-- <script>
             let w;
             
@@ -64,19 +66,22 @@
             <!-- </div> -->
           
             <span class='game-status-message' id='status-message'></span>
+        </div>
 
+        <div class='screen' id='start-screen-modal'>
+            <div class='start-screen-board' id='start-screen' >
 
-
-
-
-
+            </div>
+        </div>
+        <div class='screen-overlay' id='start-screen-overlay' onclick="start_game()">
+            <div class='screen-overlay-message'>CLICK ANYWHERE</div>
         </div>
 
 
-        <div class='main-container'>
+        <div class='main-container' id='main-container'>
             <div class='top-bar'>
                 <div class='title help' onclick="show_instructions()">
-                    HELP
+                    <img src='./icons/help-circle.svg' class='icon-filter'/>
                 </div>
                 <div class='title' onclick="window.location.reload();">MINESWEEPER</div>
             </div>
@@ -90,12 +95,12 @@
                     </div>
                     
                     <div class='reset-container'>
-                        <button class='reset-button' id='reset-board' onclick="make_minefield()">Reset</button>
+                        <!-- <button class='reset-button' id='reset-board' onclick="make_minefield()">Reset</button> -->
                     </div>
                 </div>
                 <div class='board-container'>
-                    <div class='board' id='minefield'>
-                        <span style="line-height: 1.8;">
+                    <div class='board' id='minefield' >
+                        <!-- <span style="line-height: 1.8; color:var(--one); font-size: 25px;">
                             Select a difficulty level to start</br>
                             Click on a tile to reveal it</br>
                             Alt+Click on a tile to flag it</br>
@@ -107,10 +112,13 @@
                             Use this information to identify mines and avoid them</br>
                             Good Luck!</br>
                             Try not to die too many times
-                        </span>
+                        </span> -->
                     </div>
                 </div>
             </div>
+            <!-- <div class='bottom-bar'>
+                Powered By
+            </div> -->
         </div>
     </body>
 </html>

@@ -110,7 +110,7 @@ const fin = () => {
 const is_win = () => {
     // console.log('cells: '+String(no_of_cells));
     // console.log('mines: '+String(no_of_mines));
-    console.log('---------------------');
+    // console.log('---------------------');
     if(no_of_cells==no_of_mines)
     {
         fin();
@@ -203,7 +203,7 @@ const generate_board = () => {
 const make_minefield = () => {
     generate_board();
     // let r = 0, c=0;
-    console.log(global_rows);
+    // console.log(global_rows);
     let field = document.getElementById('minefield');
     // let r = 0;
     while(field.hasChildNodes())
@@ -230,8 +230,59 @@ const make_minefield = () => {
         // r++;
     }
 
-    print_board(global_board);
+    // print_board(global_board);
 }
+
+
+
+
+
+
+
+// const make_tile_page = () => {
+//     // generate_board();
+//     // let r = 0, c=0;
+//     // console.log(global_rows);
+//     let field = document.getElementById('minefield');
+//     // let r = 0;
+//     while(field.hasChildNodes())
+//         field.removeChild(field.lastChild);
+
+//     field.innerHTML="HELLLLOOOOOOOOO";
+
+//     // for(let r =0; r< 16; r++)
+//     // {
+//     //     let temp_row = document.createElement('div');
+//     //     temp_row.className = "minefield-row";
+//     //     temp_row.id = "row_" + String(r);
+//     //     for(let c=0; c< 25; c++)
+//     //     {
+//     //         let temp_cell = document.createElement('button');
+//     //         temp_cell.className = "cell small unexplored";
+//     //         let cell_id = "tile_" + String(r) + "_" + String(c);
+//     //         temp_cell.id = cell_id
+//     //         // temp_cell.onclick = (event) => reveal_or_toggle(event, cell_id);
+//     //         // temp_cell.ondblclick = () => toggle_flag(cell_id);
+//     //         temp_cell.innerHTML = '_';
+//     //         temp_row.appendChild(temp_cell);
+//     //     }
+//     //     field.appendChild(temp_row);
+//     //     // r++;
+//     // }
+
+//     // print_board(global_board);
+// };
+
+
+
+
+
+
+
+
+
+
+
 
 
 const make_beginner_minefield = () => {
